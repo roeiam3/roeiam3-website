@@ -15,6 +15,53 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <script defer src="./assets/js/main.js"></script>
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  main.container {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+  }
+  .about-giant {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+  }
+  .site-footer {
+    flex-shrink: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    background: var(--color-bg-secondary, #181f2a);
+    color: var(--color-text-secondary, #bfc9dd);
+    text-align: center;
+    padding: 1em 0;
+    z-index: 100;
+  }
+</style>
 </head>
 <body>
     <header class="site-header">
@@ -36,25 +83,9 @@
     </header>
     <main class="container">
         <!-- Hero Section -->
-        <section class="about about-large">
-    <h1 style="margin-bottom: 0.5em;">About Me</h1>
-    <p style="font-size:1.25rem;">Replace-here</p>
-</section>
-        <!-- Recent Activity -->
-        <section class="recent-activity">
-            <h2>Recent Activity</h2>
-            <div class="activity-grid">
-                <div class="activity-block">
-                    <h4>Latest Documentation</h4>
-                    <ul>
-                        <li><a href="./documentation/topics/topic-1.html">Deploying a Secure VPC on AWS</a> <span class="meta">(2025-07-15)</span></li>
-                        <li><a href="./documentation/topics/topic-2.html">Zero Trust Networking Explained</a> <span class="meta">(2025-07-10)</span></li>
-                        <li><a href="./documentation/topics/topic-3.html">Getting Started with Python Automation</a> <span class="meta">(2025-07-05)</span></li>
-                    </ul>
-                    <a href="./documentation/" class="view-all">View All Documentation</a>
-                </div>
-                <div class="activity-block">
-                    <h4>Latest Resources</h4>
+        <section class="about about-giant">
+            <h1 style="margin-bottom: 1em; font-size: 3rem; text-align: center;">About Me</h1>
+            <p style="font-size:2rem; text-align: center; max-width: 800px; margin: 0 auto;">Replace-here</p>
                     <ul>
                         <li><a href="./resources/files/encor-summary.pdf">ENCOR Summary PDF</a> <span class="meta">(2025-07-12)</span></li>
                         <li><a href="./resources/files/ai-research.pdf">AI Research Paper</a> <span class="meta">(2025-07-08)</span></li>
