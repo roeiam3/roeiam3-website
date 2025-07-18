@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | roeiam.online</title>
+    <meta name="description" content="Curated documents, summaries, and research files.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../assets/images/profile.jpg" alt="Profile" class="avatar">
+                <span>roeiam.online</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../documentation/">Documentation</a></li>
+                <li><a href="./index.html" class="active">Resources</a></li>
+                <li><a href="../contact/">Contact</a></li>
+            </ul>
+            <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+                <span class="icon-moon">🌙</span>
+            </button>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="resources-header">
+            <h1>Resources & Files</h1>
+            <p class="subtitle">Curated documents, summaries, and research files</p>
+            <div class="resources-search-filter">
+                <input type="search" id="resourcesSearch" placeholder="Search resources..." aria-label="Search resources">
+                <div class="resources-tags">
+                    <button class="tag active" data-tag="all">All</button>
+                    <button class="tag" data-tag="encor">ENCOR</button>
+                    <button class="tag" data-tag="ai-ml">AI/ML</button>
+                    <button class="tag" data-tag="hpc">HPC</button>
+                    <button class="tag" data-tag="research">Research</button>
+                    <button class="tag" data-tag="summaries">Summaries</button>
+                    <button class="tag" data-tag="pdf">PDF</button>
+                </div>
+            </div>
+        </section>
+        <section class="resources-grid">
+            <!-- File Block 1 -->
+            <article class="resource-card" data-tags="encor pdf summaries">
+                <div class="resource-thumb"><span class="file-icon">📄</span></div>
+                <h2><a href="./files/encor-summary.pdf" target="_blank">ENCOR Summary PDF</a></h2>
+                <p class="resource-desc">A comprehensive summary of ENCOR exam topics, key concepts, and study notes.</p>
+                <div class="resource-meta">
+                    <span class="meta">PDF</span>
+                    <span class="meta">1.2 MB</span>
+                    <span class="meta">2025-07-12</span>
+                </div>
+                <div class="resource-actions">
+                    <a href="./files/encor-summary.pdf" target="_blank" class="cta">View PDF</a>
+                    <a href="./files/encor-summary.pdf" download class="cta">Download</a>
+                </div>
+            </article>
+            <!-- File Block 2 -->
+            <article class="resource-card" data-tags="ai-ml pdf research">
+                <div class="resource-thumb"><span class="file-icon">📄</span></div>
+                <h2><a href="./files/ai-research.pdf" target="_blank">AI Research Paper</a></h2>
+                <p class="resource-desc">Latest research in AI/ML with practical applications and detailed analysis.</p>
+                <div class="resource-meta">
+                    <span class="meta">PDF</span>
+                    <span class="meta">2.5 MB</span>
+                    <span class="meta">2025-07-08</span>
+                </div>
+                <div class="resource-actions">
+                    <a href="./files/ai-research.pdf" target="_blank" class="cta">View PDF</a>
+                    <a href="./files/ai-research.pdf" download class="cta">Download</a>
+                </div>
+            </article>
+            <!-- More blocks can be added here -->
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <span>&copy; 2025 roeiam.online</span>
+            <span>Built with ❤️ | <a href="https://github.com/roeiam3/roeiam3-website" target="_blank">GitHub</a></span>
+            <span class="footer-social">
+                <a href="https://linkedin.com/in/your-linkedin" target="_blank" aria-label="LinkedIn">LinkedIn</a> |
+                <a href="https://github.com/your-github" target="_blank" aria-label="GitHub">GitHub</a>
+            </span>
+        </div>
+    </footer>
+</body>
+</html>

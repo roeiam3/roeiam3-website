@@ -1,54 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Simple Webpage</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f4f6fb;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        header {
-            background: #4a90e2;
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-        main {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .content {
-            background: white;
-            padding: 2rem 3rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-            text-align: center;
-        }
-        @media (max-width: 600px) {
-            .content {
-                padding: 1rem;
-            }
-        }
-    </style>
+    <title>roeiam.online | IT Blog & Journal</title>
+    <meta name="description" content="A professional IT blog, journal, and knowledge base.">
+    <meta property="og:title" content="roeiam.online | IT Blog & Journal">
+    <meta property="og:description" content="A professional IT blog, journal, and knowledge base.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://roeiam.online/">
+    <meta property="og:image" content="./assets/images/profile.jpg">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script defer src="./assets/js/main.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Welcome!</h1>
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./assets/images/profile.jpg" alt="Profile" class="avatar">
+                <span>roeiam.online</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="./documentation/">Documentation</a></li>
+                <li><a href="./resources/">Resources</a></li>
+                <li><a href="./contact/">Contact</a></li>
+            </ul>
+            <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+                <span class="icon-moon">🌙</span>
+            </button>
+        </nav>
     </header>
-    <main>
-        <div class="content">
-            <h2>This is a simple webpage</h2>
-            <p>Created just for you. 🎉</p>
-        </div>
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="./assets/images/profile.jpg" alt="Professional Headshot" class="hero-avatar">
+            <h1>IT Professional & Continuous Learner</h1>
+            <p class="tagline">Building, learning, and sharing in the world of technology.</p>
+        </section>
+        <!-- About Section -->
+        <section class="about">
+            <h2>About Me</h2>
+            <p>Hello! I’m <strong>Your Name</strong>, an IT professional passionate about networking, cloud, and AI/ML. I believe in lifelong learning and sharing knowledge through clear documentation and hands-on exploration.</p>
+            <p>Currently focused on <strong>cloud architecture</strong> and <strong>automation</strong>, I enjoy breaking down complex topics and helping others grow in their IT journey.</p>
+            <p>This site is my digital journal—documenting discoveries, sharing resources, and reflecting on my professional growth.</p>
+        </section>
+        <!-- Expertise Cards -->
+        <section class="expertise">
+            <h2>Expertise</h2>
+            <div class="expertise-grid">
+                <div class="card">
+                    <span class="icon">🌐</span>
+                    <h3>Networking</h3>
+                    <p>Designing, securing, and troubleshooting modern network infrastructures.</p>
+                </div>
+                <div class="card">
+                    <span class="icon">☁️</span>
+                    <h3>Cloud Computing</h3>
+                    <p>Architecting scalable solutions on AWS, Azure, and hybrid environments.</p>
+                </div>
+                <div class="card">
+                    <span class="icon">🤖</span>
+                    <h3>AI / ML</h3>
+                    <p>Exploring machine learning, automation, and data-driven insights.</p>
+                </div>
+                <div class="card">
+                    <span class="icon">📝</span>
+                    <h3>Documentation</h3>
+                    <p>Creating clear, concise, and accessible technical documentation.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Recent Activity -->
+        <section class="recent-activity">
+            <h2>Recent Activity</h2>
+            <div class="activity-grid">
+                <div class="activity-block">
+                    <h4>Latest Documentation</h4>
+                    <ul>
+                        <li><a href="./documentation/topics/topic-1.html">Deploying a Secure VPC on AWS</a> <span class="meta">(2025-07-15)</span></li>
+                        <li><a href="./documentation/topics/topic-2.html">Zero Trust Networking Explained</a> <span class="meta">(2025-07-10)</span></li>
+                        <li><a href="./documentation/topics/topic-3.html">Getting Started with Python Automation</a> <span class="meta">(2025-07-05)</span></li>
+                    </ul>
+                    <a href="./documentation/" class="view-all">View All Documentation</a>
+                </div>
+                <div class="activity-block">
+                    <h4>Latest Resources</h4>
+                    <ul>
+                        <li><a href="./resources/files/encor-summary.pdf">ENCOR Summary PDF</a> <span class="meta">(2025-07-12)</span></li>
+                        <li><a href="./resources/files/ai-research.pdf">AI Research Paper</a> <span class="meta">(2025-07-08)</span></li>
+                    </ul>
+                    <a href="./resources/" class="view-all">View All Resources</a>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <span>&copy; 2025 roeiam.online</span>
+            <span>Built with ❤️ | <a href="https://github.com/roeiam3/roeiam3-website" target="_blank">GitHub</a></span>
+            <span class="footer-social">
+                <a href="https://linkedin.com/in/your-linkedin" target="_blank" aria-label="LinkedIn">LinkedIn</a> |
+                <a href="https://github.com/your-github" target="_blank" aria-label="GitHub">GitHub</a>
+            </span>
+        </div>
+    </footer>
 </body>
 </html>

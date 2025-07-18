@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | roeiam.online</title>
+    <meta name="description" content="Technical documentation, explorations, and learning journal.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script defer src="../assets/js/main.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../assets/images/profile.jpg" alt="Profile" class="avatar">
+                <span>roeiam.online</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./index.html" class="active">Documentation</a></li>
+                <li><a href="../resources/">Resources</a></li>
+                <li><a href="../contact/">Contact</a></li>
+            </ul>
+            <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+                <span class="icon-moon">🌙</span>
+            </button>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="doc-header">
+            <h1>Documentation & Explorations</h1>
+            <p class="subtitle">My learning journey and technical discoveries</p>
+            <div class="doc-search-filter">
+                <input type="search" id="docSearch" placeholder="Search documentation..." aria-label="Search documentation">
+                <div class="doc-tags">
+                    <button class="tag active" data-tag="all">All</button>
+                    <button class="tag" data-tag="networking">Networking</button>
+                    <button class="tag" data-tag="cloud">Cloud</button>
+                    <button class="tag" data-tag="ai-ml">AI/ML</button>
+                    <button class="tag" data-tag="tools">Tools</button>
+                </div>
+            </div>
+        </section>
+        <section class="doc-grid">
+            <!-- Documentation Block 1 -->
+            <article class="doc-card" data-tags="cloud networking">
+                <h2><a href="./topics/topic-1.html">Deploying a Secure VPC on AWS</a></h2>
+                <p class="doc-desc">Step-by-step guide to designing and deploying a secure Virtual Private Cloud using AWS best practices.</p>
+                <div class="doc-meta">
+                    <span class="meta">2025-07-15</span>
+                    <span class="meta">Cloud, Networking</span>
+                    <span class="meta">7 min read</span>
+                </div>
+                <div class="doc-preview">Learn how to create subnets, configure routing, and set up security groups for a robust AWS environment...</div>
+                <a href="./topics/topic-1.html" class="cta">Read More</a>
+            </article>
+            <!-- Documentation Block 2 -->
+            <article class="doc-card" data-tags="networking security">
+                <h2><a href="./topics/topic-2.html">Zero Trust Networking Explained</a></h2>
+                <p class="doc-desc">An introduction to Zero Trust principles and how to apply them to modern network architectures.</p>
+                <div class="doc-meta">
+                    <span class="meta">2025-07-10</span>
+                    <span class="meta">Networking, Security</span>
+                    <span class="meta">5 min read</span>
+                </div>
+                <div class="doc-preview">Zero Trust is a security model that requires strict verification for every user and device. This guide covers...</div>
+                <a href="./topics/topic-2.html" class="cta">Read More</a>
+            </article>
+            <!-- Documentation Block 3 -->
+            <article class="doc-card" data-tags="ai-ml automation">
+                <h2><a href="./topics/topic-3.html">Getting Started with Python Automation</a></h2>
+                <p class="doc-desc">Beginner's guide to automating tasks with Python, including scripts, scheduling, and practical examples.</p>
+                <div class="doc-meta">
+                    <span class="meta">2025-07-05</span>
+                    <span class="meta">AI/ML, Automation</span>
+                    <span class="meta">6 min read</span>
+                </div>
+                <div class="doc-preview">Automation saves time and reduces errors. Learn how to automate repetitive tasks using Python scripts...</div>
+                <a href="./topics/topic-3.html" class="cta">Read More</a>
+            </article>
+            <!-- More blocks can be added here -->
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <span>&copy; 2025 roeiam.online</span>
+            <span>Built with ❤️ | <a href="https://github.com/roeiam3/roeiam3-website" target="_blank">GitHub</a></span>
+            <span class="footer-social">
+                <a href="https://linkedin.com/in/your-linkedin" target="_blank" aria-label="LinkedIn">LinkedIn</a> |
+                <a href="https://github.com/your-github" target="_blank" aria-label="GitHub">GitHub</a>
+            </span>
+        </div>
+    </footer>
+</body>
+</html>
