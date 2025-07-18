@@ -45,16 +45,239 @@ footer {
   left: 0;
 }
 
+.footer-link {
+  color: #b6c2d1;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 0.2em;
+  transition: color 0.2s;
+}
+.footer-link:hover {
+  color: #f8fafc;
+  text-decoration: underline;
+}
+
+
 header {
   width: 100vw;
   background: var(--header-footer-bg);
   color: var(--header-footer-text);
-  text-align: center;
-  padding: 1em 0 0.5em 0;
+  padding: 1.4em 0 1em 0;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
+  box-shadow: 0 2px 16px rgba(24,34,51,0.11);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2em;
+  height: 100%;
+}
+
+.header-content h1 {
+  font-size: 2.1rem;
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #f8fafc;
+  flex: 0 0 auto;
+}
+
+.nav-bar {
+  display: flex;
+  gap: 1.2em;
+  margin-left: 2.5em;
+  flex: 1 1 auto;
+}
+
+.nav-btn {
+  display: inline-block;
+  padding: 0.55em 1.4em;
+  border-radius: 8px;
+  background: none;
+  color: #cbd5e1;
+  font-size: 1.08rem;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  cursor: pointer;
+  outline: none;
+}
+
+.nav-btn:hover, .nav-btn:focus {
+  background: #23272f;
+  color: #f8fafc;
+  box-shadow: 0 2px 8px rgba(24,34,51,0.10);
+  text-decoration: none;
+}
+
+.nav-active {
+  background: #353a40;
+  color: #f8fafc;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(24,34,51,0.14);
+}
+
+
+.about-box {
+  background: #23272f;
+  border: 2px solid #353a40;
+  border-radius: 22px;
+  max-width: 720px;
+  min-width: 350px;
+  margin: 7em auto 0 auto;
+  padding: 3em 3em 2.5em 3em;
+  color: #f1f5fa;
+  text-align: center;
+  font-size: 1.22rem;
+  font-family: 'Inter', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-box h3 {
+  margin-top: 0;
+  margin-bottom: 1.2em;
+  font-size: 2rem;
+  color: #f8fafc;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.about-box p {
+  margin: 0;
+  font-size: 1.22rem;
+  line-height: 1.7;
+  color: #f1f5fa;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+header {
+  width: 100vw;
+  background: #181a1b;
+  color: #f8fafc;
+  text-align: center;
+  padding: 2.2em 0 1.2em 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  font-size: 2.1rem;
+  font-family: 'Inter', Arial, sans-serif;
+  box-shadow: 0 2px 16px rgba(24,34,51,0.11);
+  letter-spacing: 0.01em;
+}
+
+footer {
+  width: 100vw;
+  background: #181a1b;
+  color: #f8fafc;
+  text-align: center;
+  padding: 1.5em 0 1.2em 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 1.2rem;
+  font-family: 'Inter', Arial, sans-serif;
+  box-shadow: 0 -2px 16px rgba(24,34,51,0.11);
+  letter-spacing: 0.01em;
+}
+
+body {
+  padding-top: 5.5em;
+  padding-bottom: 4.5em;
+}
+
+
+.about-box h3 {
+  margin-top: 0;
+  margin-bottom: 1.2em;
+  font-size: 2rem;
+  color: #eaf2fb;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.about-box p {
+  margin: 0;
+  font-size: 1.22rem;
+  line-height: 1.7;
+  color: #f1f5fa;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+header {
+  width: 100vw;
+  background: #181a1b;
+  color: #f8fafc;
+  text-align: center;
+  padding: 2.2em 0 1.2em 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  font-size: 2.1rem;
+  font-family: 'Inter', Arial, sans-serif;
+  box-shadow: 0 2px 16px rgba(24,34,51,0.11);
+  letter-spacing: 0.01em;
+}
+
+footer {
+  width: 100vw;
+  background: #181a1b;
+  color: #f8fafc;
+  text-align: center;
+  padding: 1.5em 0 1.2em 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 1.2rem;
+  font-family: 'Inter', Arial, sans-serif;
+  box-shadow: 0 -2px 16px rgba(24,34,51,0.11);
+  letter-spacing: 0.01em;
+}
+
+body {
+  padding-top: 5.5em;
+  padding-bottom: 4.5em;
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
 }
 
 body {
