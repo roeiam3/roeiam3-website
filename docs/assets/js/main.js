@@ -1,4 +1,4 @@
-// Dark Mode Toggle
+// main.js: handles dark mode toggle and accessibility/animation only. No homepage-specific logic. Dark Mode Toggle
 const darkModeToggle = document.getElementById('darkModeToggle');
 const html = document.documentElement;
 
@@ -18,10 +18,10 @@ function toggleTheme() {
 
 darkModeToggle && darkModeToggle.addEventListener('click', toggleTheme);
 
-// Set initial theme
+// main.js: handles dark mode toggle and accessibility/animation only. No homepage-specific logic. Set initial theme
 setTheme(getPreferredTheme());
 
-// Animate elements on scroll
+// main.js: handles dark mode toggle and accessibility/animation only. No homepage-specific logic. Animate elements on scroll
 function animateOnScroll() {
   const animated = document.querySelectorAll('.card, .activity-block, .about, .hero-avatar');
   animated.forEach(el => {
@@ -34,7 +34,7 @@ function animateOnScroll() {
 window.addEventListener('scroll', animateOnScroll);
 window.addEventListener('DOMContentLoaded', animateOnScroll);
 
-// Accessibility: Keyboard navigation for nav
+// main.js: handles dark mode toggle and accessibility/animation only. No homepage-specific logic. Accessibility: Keyboard navigation for nav
 const navLinks = document.querySelectorAll('.nav-links a');
 navLinks.forEach(link => {
   link.addEventListener('focus', () => link.classList.add('active'));
