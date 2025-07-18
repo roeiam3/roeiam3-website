@@ -247,12 +247,26 @@ body {
 .view-all:hover {
     color: var(--orange);
 }
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main.container {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .site-footer {
-    background: var(--footer-bg);
-    color: var(--footer-text);
-    padding: 1.5rem 0 1rem 0;
-    text-align: center;
-    border-top: 1px solid var(--border);
+  flex-shrink: 0;
+  width: 100vw;
+  background: var(--color-bg-secondary, #181f2a);
+  color: var(--color-text-secondary, #bfc9dd);
+  text-align: center;
+  padding: 1em 0;
+  margin-top: auto;
 }
 .footer-content {
     max-width: 1200px;
