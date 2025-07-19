@@ -206,7 +206,7 @@ header {
 
 @media (max-width: 768px) {
   .about-box {
-    margin: 8em 1em 0 1em;
+    margin: 4em 1em 0 1em;
     padding: 2em 1.5em 2em 1.5em;
     min-width: unset;
     border-radius: 16px;
@@ -215,7 +215,7 @@ header {
 
 @media (max-width: 480px) {
   .about-box {
-    margin: 9em 0.5em 0 0.5em;
+    margin: 3em 0.5em 0 0.5em;
     padding: 1.5em 1em 1.5em 1em;
     font-size: 1.1rem;
   }
@@ -479,7 +479,7 @@ body {
 
 @media (max-width: 768px) {
   .resources-grid {
-    padding-top: 7em;
+    padding-top: 4em;
     padding-bottom: 2.5em;
     gap: 1.8em;
     grid-template-columns: 1fr;
@@ -490,7 +490,7 @@ body {
 
 @media (max-width: 600px) {
   .resources-grid {
-    padding-top: 8em;
+    padding-top: 3.5em;
     padding-bottom: 2em;
     padding-left: 0.5em;
     padding-right: 0.5em;
@@ -499,7 +499,7 @@ body {
 
 @media (max-width: 480px) {
   .resources-grid {
-    padding-top: 9em;
+    padding-top: 3em;
     gap: 1.5em;
   }
 }
