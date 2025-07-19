@@ -278,12 +278,6 @@ footer {
   letter-spacing: 0.01em;
 }
 
-body {
-  padding-top: 5.5em;
-  padding-bottom: 4.5em;
-}
-
-
 .about-box h3 {
   margin-top: 0;
   margin-bottom: 1.2em;
@@ -340,12 +334,6 @@ footer {
   box-shadow: 0 -2px 16px rgba(24,34,51,0.11);
   letter-spacing: 0.01em;
 }
-
-body {
-  padding-top: 5.5em;
-  padding-bottom: 4.5em;
-}
-
 
 main {
   display: flex;
@@ -568,10 +556,59 @@ body {
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  .contact-form {
+    gap: 0.8em;
+    margin: 0 auto 1.2em auto;
+  }
+  
+  .contact-form textarea {
+    min-height: 60px;
+  }
+  
+  .contact-info {
+    margin-top: 1.2em;
+  }
+  
+  .contact-info p {
+    font-size: 0.95rem;
+    margin: 0;
+  }
+}
+
 @media (max-width: 480px) {
   .contact-form {
-    gap: 0.9em;
-    margin: 0 auto 1em auto;
+    gap: 0.7em;
+    margin: 0 auto 0.8em auto;
+  }
+  
+  .contact-form label {
+    font-size: 0.95rem;
+    margin-bottom: 0.2em;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+    padding: 0.6em 0.8em;
+  }
+  
+  .contact-form textarea {
+    min-height: 50px;
+  }
+  
+  .contact-btn {
+    padding: 0.6em 1.4em;
+    font-size: 1rem;
+    margin-top: 0.3em;
+  }
+  
+  .contact-info {
+    margin-top: 1em;
+  }
+  
+  .contact-info p {
+    font-size: 0.9rem;
   }
 }
 
