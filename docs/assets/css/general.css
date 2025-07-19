@@ -99,7 +99,11 @@ header {
   .header-content {
     flex-direction: column;
     padding: 0 1em;
-    gap: 0.8em;
+    gap: 0.5em;
+  }
+  
+  header {
+    padding: 0.8em 0 0.6em 0;
   }
 }
 
@@ -115,8 +119,9 @@ header {
 
 @media (max-width: 768px) {
   .header-content h1 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     text-align: center;
+    margin: 0;
   }
 }
 
@@ -130,7 +135,7 @@ header {
 @media (max-width: 768px) {
   .nav-bar {
     margin-left: 0;
-    gap: 0.8em;
+    gap: 0.6em;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -154,8 +159,8 @@ header {
 
 @media (max-width: 768px) {
   .nav-btn {
-    padding: 0.4em 1em;
-    font-size: 0.95rem;
+    padding: 0.3em 0.8em;
+    font-size: 0.9rem;
   }
 }
 
@@ -364,12 +369,18 @@ body {
     font-size: 1.05rem;
   }
   
-  header {
-    padding: 1.5em 0 1em 0;
+  body {
+    padding-top: 5.5em;
   }
   
-  body {
-    padding-top: 7em;
+  footer {
+    padding: 0.7em 0;
+    font-size: 0.95rem;
+  }
+  
+  .footer-link {
+    font-size: 0.9rem;
+    margin: 0 0.15em;
   }
 }
 
@@ -382,7 +393,25 @@ body {
   }
   
   body {
-    padding-top: 8em;
+    padding-top: 5em;
+  }
+  
+  .header-content h1 {
+    font-size: 1.3rem;
+  }
+  
+  .nav-btn {
+    padding: 0.25em 0.7em;
+    font-size: 0.85rem;
+  }
+  
+  header {
+    padding: 0.6em 0 0.5em 0;
+  }
+  
+  footer {
+    padding: 0.6em 0;
+    font-size: 0.9rem;
   }
 }
 
@@ -395,7 +424,7 @@ body {
   }
   
   body {
-    padding-top: 9em;
+    padding-top: 4.5em;
   }
   
   .about-box h3 {
@@ -404,6 +433,28 @@ body {
   
   .about-box p {
     font-size: 1.05rem;
+  }
+  
+  .header-content h1 {
+    font-size: 1.2rem;
+  }
+  
+  .nav-btn {
+    padding: 0.2em 0.6em;
+    font-size: 0.8rem;
+  }
+  
+  header {
+    padding: 0.5em 0 0.4em 0;
+  }
+  
+  footer {
+    padding: 0.5em 0;
+    font-size: 0.85rem;
+  }
+  
+  .footer-link {
+    font-size: 0.8rem;
   }
 }
 
