@@ -678,3 +678,70 @@ body {
   text-align: center;
 }
 
+/* Thank you message styles */
+.thank-you-message {
+  background: #1e3a2e;
+  border: 1.5px solid #2d5a3d;
+  border-radius: 8px;
+  padding: 1.5em;
+  margin: 1.5em auto;
+  max-width: 420px;
+  text-align: center;
+  color: #a7f3d0;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.thank-you-message h4 {
+  color: #6ee7b7;
+  margin: 0 0 0.5em 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.thank-you-message p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .thank-you-message {
+    padding: 1.2em;
+    margin: 1.2em auto;
+  }
+  
+  .thank-you-message h4 {
+    font-size: 1.1rem;
+  }
+  
+  .thank-you-message p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .thank-you-message {
+    padding: 1em;
+    margin: 1em auto;
+  }
+  
+  .thank-you-message h4 {
+    font-size: 1rem;
+  }
+  
+  .thank-you-message p {
+    font-size: 0.9rem;
+  }
+}
+
