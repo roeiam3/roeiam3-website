@@ -26,13 +26,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
     contactForm.addEventListener('submit', function(e) {
-      // Let the form submit normally to Formspree
-      // The thank you message will be shown when the page redirects back
+      // Update button text but don't prevent form submission
       const submitBtn = contactForm.querySelector('.contact-btn');
       if (submitBtn) {
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
       }
+      // Allow the form to submit normally to Formspree (don't preventDefault)
     });
   }
   
