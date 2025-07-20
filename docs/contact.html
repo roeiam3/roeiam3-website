@@ -32,9 +32,6 @@
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
 
-        <!-- Subject line -->
-        <input type="hidden" name="_subject" value="Contact from Website">
-
         <button type="submit" class="contact-btn">Send Message</button>
       </form>
       
@@ -81,7 +78,19 @@ document.addEventListener('DOMContentLoaded', function() {
       
       isSubmitting = true;
       const submitBtn = contactForm.querySelector('.contact-btn');
+      
+      // Create FormData and add dynamic subject with timestamp
       const formData = new FormData(contactForm);
+      
+      // Generate unique timestamp for subject line
+      const now = new Date();
+      const timestamp = now.toISOString().replace('T', ' ').substring(0, 19);
+      const uniqueSubject = `Contact from Website - ${timestamp}`;
+      
+      // Update or add the subject field dynamically
+      formData.set('_subject', uniqueSubject);
+      
+      console.log('Dynamic subject set to:', uniqueSubject);
       
       // Update button state immediately
       if (submitBtn) {
