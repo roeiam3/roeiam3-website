@@ -56,26 +56,34 @@
   </footer>
 
 <script>
-// Contact form AJAX handling - inline to ensure it works
+// Contact form AJAX handling - optimized for multiple submissions
 document.addEventListener('DOMContentLoaded', function() {
   console.log('DOM loaded, setting up contact form');
   
   const contactForm = document.querySelector('.contact-form');
   const thankYouMessage = document.getElementById('thank-you');
+  let isSubmitting = false; // Prevent multiple simultaneous submissions
   
   if (contactForm && thankYouMessage) {
     console.log('Contact form and thank you message found');
     
-    // Remove any existing event listeners and add new one
-    contactForm.onsubmit = function(e) {
+    // Use addEventListener instead of onsubmit for better control
+    contactForm.addEventListener('submit', function(e) {
       console.log('Form submission intercepted!');
       e.preventDefault();
-      e.stopPropagation();
+      e.stopImmediatePropagation();
       
+      // Prevent multiple submissions
+      if (isSubmitting) {
+        console.log('Already submitting, ignoring duplicate submission');
+        return false;
+      }
+      
+      isSubmitting = true;
       const submitBtn = contactForm.querySelector('.contact-btn');
       const formData = new FormData(contactForm);
       
-      // Update button state
+      // Update button state immediately
       if (submitBtn) {
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
@@ -83,15 +91,20 @@ document.addEventListener('DOMContentLoaded', function() {
       
       console.log('Starting AJAX submission to:', contactForm.action);
       
-      // Submit form via AJAX
+      // Submit form via AJAX with timeout
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+      
       fetch(contactForm.action, {
         method: 'POST',
         body: formData,
         headers: {
           'Accept': 'application/json'
-        }
+        },
+        signal: controller.signal
       })
       .then(response => {
+        clearTimeout(timeoutId);
         console.log('Response status:', response.status);
         if (response.ok) {
           console.log('Success! Showing thank you message');
@@ -101,26 +114,47 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       })
       .catch(error => {
+        clearTimeout(timeoutId);
         console.error('Error:', error);
-        alert('Sorry, there was an error sending your message. Please try again.');
         
-        // Reset button on error
-        if (submitBtn) {
-          submitBtn.textContent = 'Send Message';
-          submitBtn.disabled = false;
+        if (error.name === 'AbortError') {
+          alert('Request timed out. Please try again.');
+        } else {
+          alert('Sorry, there was an error sending your message. Please try again.');
         }
+        
+        // Reset everything immediately on error
+        resetForm();
+      })
+      .finally(() => {
+        isSubmitting = false; // Always reset submission flag
       });
       
       return false;
-    };
+    }, { passive: false });
   } else {
     console.log('Contact form or thank you message not found!');
+  }
+  
+  function resetForm() {
+    const contactForm = document.querySelector('.contact-form');
+    const submitBtn = contactForm.querySelector('.contact-btn');
+    
+    console.log('Resetting form immediately');
+    
+    // Reset button state immediately
+    if (submitBtn) {
+      submitBtn.textContent = 'Send Message';
+      submitBtn.disabled = false;
+    }
+    
+    // Reset submission flag
+    isSubmitting = false;
   }
   
   function showThankYouMessage() {
     const contactForm = document.querySelector('.contact-form');
     const thankYouMessage = document.getElementById('thank-you');
-    const submitBtn = contactForm.querySelector('.contact-btn');
     
     console.log('Showing thank you message');
     
@@ -132,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Scroll to the thank you message
       thankYouMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
       
-      // Reset form and show it again after 4 seconds
+      // Reset form and show it again after 3 seconds (reduced time)
       setTimeout(() => {
         contactForm.style.display = 'flex';
         thankYouMessage.style.display = 'none';
@@ -140,16 +174,22 @@ document.addEventListener('DOMContentLoaded', function() {
         // Reset form fields
         contactForm.reset();
         
-        // Reset submit button
-        if (submitBtn) {
-          submitBtn.textContent = 'Send Message';
-          submitBtn.disabled = false;
-        }
+        // Reset form state completely
+        resetForm();
         
         console.log('Form reset and ready for next submission');
-      }, 4000);
+      }, 3000); // Reduced from 4000 to 3000ms
     }
   }
+  
+  // Add a manual reset button functionality (optional)
+  document.addEventListener('keydown', function(e) {
+    // Press Escape to reset form if stuck
+    if (e.key === 'Escape' && isSubmitting) {
+      console.log('Emergency reset triggered by Escape key');
+      resetForm();
+    }
+  });
 });
 </script>
 
