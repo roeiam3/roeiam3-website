@@ -20,6 +20,13 @@ html, body {
   overflow: hidden;
 }
 
+/* Enable scrolling specifically for contact page on desktop */
+body.contact-page {
+  overflow: auto;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-y: auto;   /* Allow vertical scroll */
+}
+
 /* Enable scrolling on mobile devices */
 @media (max-width: 768px) {
   html, body {
